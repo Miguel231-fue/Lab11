@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+
+    <style>
+        body {
+            background: #fff5eb;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
+        .container {
+            background: white;
+            width: 420px;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 3px 12px #0002;
+            text-align: center;
+        }
+        h1 {
+            font-size: 30px;
+            color: #f07f22;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        p {
+            color: #444;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #f07f22;
+            font-weight: 600;
+        }
+        .footer {
+            margin-top: 25px;
+            color: #666;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Evaluación de Descuentos</h1>
+        <h2>Laboratorio 11 - Ejercicio 3</h2>
+        <p>Ingresa el monto de tu compra.</p>
+
+        <div id="resultado"></div>
+
+        <div class="footer">Realizado por Miguel Bilbao</div>
+    </div>
+
+    <script>
+        let monto = parseFloat(prompt("Ingresa el monto total de tu compra:"));
+        let mensaje = "";
+
+        if (monto > 100) {
+            let descuento = monto * 0.10;
+            let total = monto - descuento;
+            mensaje = "Total con descuento: $" + total.toFixed(2);
+        } else {
+            mensaje = "Sin descuento. Total: $" + monto.toFixed(2);
+        }
+
+        document.getElementById("resultado").textContent = mensaje;
+        console.log(mensaje);
+    </script>
+
+</body>
+</html>

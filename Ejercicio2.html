@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+
+    <style>
+        body {
+            background: #effff0;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
+        .container {
+            background: white;
+            width: 420px;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 3px 12px #0002;
+            text-align: center;
+        }
+        h1 {
+            font-size: 30px;
+            color: #19a74d;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        p {
+            color: #444;
+            margin-bottom: 15px;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #19a74d;
+            font-weight: 600;
+        }
+        .footer {
+            font-size: 13px;
+            color: #666;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Número Par o Impar</h1>
+        <h2>Laboratorio 11 - Ejercicio 2</h2>
+        <p>Ingresa un número y revisa el resultado.</p>
+
+        <div id="resultado"></div>
+
+        <div class="footer">Realizado por Miguel Bilbao</div>
+    </div>
+
+    <script>
+        let numero = parseInt(prompt("Ingresa un número:"));
+        let resultado = "";
+
+        if (numero % 2 === 0) {
+            resultado = "El número es PAR";
+        } else {
+            resultado = "El número es IMPAR";
+        }
+
+        document.getElementById("resultado").textContent = resultado;
+        console.log(resultado);
+    </script>
+
+</body>
+</html>

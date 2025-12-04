@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+
+    <style>
+        body {
+            background: #f0f6ff;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
+        .container {
+            background: white;
+            width: 420px;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 3px 12px #0002;
+            text-align: center;
+        }
+        h1 {
+            font-size: 30px;
+            color: #275ddf;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #333;
+        }
+        p {
+            font-size: 15px;
+            color: #444;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #275ddf;
+            font-weight: 600;
+        }
+        .footer {
+            font-size: 13px;
+            color: #666;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Verificación de Calificaciones</h1>
+        <h2>Laboratorio 11 - Ejercicio 1</h2>
+        <p>Ingresa una calificación y revisa el resultado.</p>
+
+        <div id="resultado"></div>
+
+        <div class="footer">Realizado por Miguel Bilbao</div>
+    </div>
+
+    <script>
+        let calificacion = parseInt(prompt("Ingresa una calificación de 0 a 100:"));
+        let mensaje = "";
+
+        if (calificacion >= 90) {
+            mensaje = "Aprobado con honores";
+        } else if (calificacion >= 70) {
+            mensaje = "Aprobado";
+        } else {
+            mensaje = "Reprobado";
+        }
+
+        document.getElementById("resultado").textContent = mensaje;
+        console.log(mensaje);
+    </script>
+
+</body>
+</html>

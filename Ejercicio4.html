@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4</title>
+
+    <style>
+        body {
+            background: #f7ebff;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
+        .container {
+            background: white;
+            width: 420px;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 3px 12px #0002;
+            text-align: center;
+        }
+        h1 {
+            font-size: 30px;
+            color: #8a2ce1;
+        }
+        h2 {
+            font-size: 18px;
+            color: #333;
+            font-weight: 600;
+        }
+        p {
+            color: #444;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #8a2ce1;
+            font-weight: 600;
+        }
+        .footer {
+            margin-top: 25px;
+            color: #666;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Juego de Adivinanza</h1>
+        <h2>Laboratorio 11 - Ejercicio 4</h2>
+        <p>Intenta adivinar el número.</p>
+
+        <div id="resultado"></div>
+
+        <div class="footer">Realizado por Miguel Bilbao</div>
+    </div>
+
+    <script>
+        let numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+        let intento = parseInt(prompt("Adivina un número del 1 al 10:"));
+        let mensaje = "";
+
+        if (intento === numeroAleatorio) {
+            mensaje = "¡Adivinaste!";
+        } else {
+            mensaje = "Fallaste, era " + numeroAleatorio;
+        }
+
+        document.getElementById("resultado").textContent = mensaje;
+        console.log(mensaje);
+    </script>
+
+</body>
+</html>
